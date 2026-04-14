@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -659,11 +658,11 @@ textarea.fi{resize:none;min-height:80px}
 <div id="apikey-modal" class="hidden">
   <div class="apikey-box">
     <div style="font-size:32px;margin-bottom:10px" id="modal-av-wrap"></div>
-    <div class="apikey-title">Hello,Cathy : ) </div>
-    <div class="apikey-sub"></div>
+    <div class="apikey-title">歡迎，Cathy</div>
+    <div class="apikey-sub">Coach Cloudy 需要 API Key 才能運作。Key 只存在你的裝置裡。</div>
     <input class="apikey-input" id="apikey-input" type="password" placeholder="sk-ant-api03-..." autocomplete="off">
-    <div class="apikey-hint">console.anthropic.com → API Keys → Create Key<br></div>
-    <button class="apikey-btn" onclick="saveApiKey()">Let's Start! →</button>
+    <div class="apikey-hint">console.anthropic.com → API Keys → Create Key<br>費用：每月約台幣 15–60 元</div>
+    <button class="apikey-btn" onclick="saveApiKey()">開始訓練 →</button>
     <div class="apikey-skip" onclick="skipApiKey()">稍後再說</div>
   </div>
 </div>
@@ -677,7 +676,7 @@ const DEF_QUOTES=[{id:1,text:'你還差得遠——但你做得到。現在去�
 const RACE_DATA={hyrox:{id:'hyrox',name:'Hyrox',icon:'🔱',isHyrox:true,desc:'8 functional stations · 8×1km runs',target:'首次完賽，建立基準時間',training:[{icon:'🚣',name:'SkiErg · Row Machine',tag:'hyrox-tag',tl:'Hyrox'},{icon:'🛷',name:'Sled Push · Pull',tag:'hyrox-tag',tl:'Hyrox'},{icon:'🏋️',name:'Burpee Broad Jump',tag:'hyrox-tag',tl:'Hyrox'},{icon:'🪣',name:'Wall Balls',tag:'hyrox-tag',tl:'Hyrox'},{icon:'🧳',name:'Farmers Carry',tag:'hyrox-tag',tl:'Hyrox'},{icon:'💪',name:'Sandbag Lunges',tag:'hyrox-tag',tl:'Hyrox'},{icon:'🏃',name:'1km Run × 8',tag:'running-tag',tl:'Cardio'}]},running:{id:'running',name:'Running',icon:'🏃',isHyrox:false,desc:'Half marathon · Trail · Speed',target:'半馬破100分鐘 · 上坡不喘',training:[{icon:'🏃',name:'Zone 2 Long Run 60min+',tag:'running-tag',tl:'Base'},{icon:'⚡',name:'Tempo Run 20–30min',tag:'running-tag',tl:'Speed'},{icon:'🔁',name:'Interval 400m×8',tag:'running-tag',tl:'Interval'},{icon:'⛰️',name:'Hill Repeats',tag:'running-tag',tl:'Climb'},{icon:'💨',name:'Strides',tag:'running-tag',tl:'Speed'}]},duathlon:{id:'duathlon',name:'TIS 桃園二鐵',icon:'🏅',isHyrox:false,desc:'跑步 5.4km → 騎車 30.7km → 跑步 5.4km',target:'2026.10.04 · 分組獎牌',training:[{icon:'🚴',name:'FTP 功率騎訓練 30.7km',tag:'duathlon-tag',tl:'Bike'},{icon:'🔄',name:'Brick 磚塊訓練（騎→跑）',tag:'duathlon-tag',tl:'Combo'},{icon:'🏃',name:'跑步訓練 5.4km×2',tag:'running-tag',tl:'Run'},{icon:'⚡',name:'換項練習 T1',tag:'duathlon-tag',tl:'Transition'},{icon:'📍',name:'竹圍漁港 · 大園區',tag:'duathlon-tag',tl:'Venue'}]}};
 const EMOJI_MOODS=[{id:'pumped',label:'拼了',emoji:'😤',color:'#0842c8'},{id:'good',label:'狀態好',emoji:'🔥',color:'#0868c8'},{id:'steady',label:'平穩',emoji:'😌',color:'#6040c0'},{id:'tired',label:'疲憊',emoji:'😴',color:'#4858b0'},{id:'struggle',label:'掙扎中',emoji:'😟',color:'#3850a8'}];
 const ACT_TYPES=['Cross','CrossFit','Running','Hyrox','Duathlon','體操/Gymnastics','Yoga/Stretch','Other'];
-const DEF_PROFILE={birthday:'1984-01-09',birthtime:'14:34',birthplace:'Taipei,Taiwan',zodiac:'魔羯座',mbti:'INTJ',astro:{sun:{sign:'魔羯座',deg:"18°11'",house:'8宮'},moon:{sign:'雙魚座',deg:"24°42'",house:'10宮'},rising:{sign:'雙子座',deg:"10°33'",house:'1宮'},mercury:{sign:'魔羯座',deg:"0°37'",house:'7宮',retro:true},venus:{sign:'射手座',deg:"9°53'",house:'6宮'},mars:{sign:'天秤座',deg:"29°02'",house:'5宮'},jupiter:{sign:'射手座',deg:"27°45'",house:'7宮'},saturn:{sign:'天蠍座',deg:"14°36'",house:'6宮'},uranus:{sign:'射手座',deg:"11°35'",house:'7宮'},neptune:{sign:'射手座',deg:"29°39'",house:'7宮'},pluto:{sign:'天蠍座',deg:"1°56'",house:'5宮'},mc:{sign:'水瓶座',deg:"25°48'",house:'10宮'}},humanDesign:{type:'顯示者',profile:'4/6',definition:'二分人',authority:'情緒型',strategy:'告知',notSelf:'憤怒',channels:['57-10（自愛/形象）','35-36（情緒激勵者）'],incarnationCross:'右角度交叉之滲透4（54/53｜57/51）'},bazi:{year:'癸亥',month:'癸丑',day:'癸酉',hour:'未時',note:'四柱全癸，水極旺'},coachPersonality:'冷靜、簡潔、有判斷。不說廢話，不雞湯。像真實教練，不像AI。偶爾直接，但不羞辱人。最多3句，可用命令句。禁止長篇解釋和情緒安慰。',coachFocus:'均衡',coachTone:3};
+const DEF_PROFILE={birthday:'1984-01-09',birthtime:'14:34',birthplace:'台灣台北',zodiac:'魔羯座',mbti:'INTJ',astro:{sun:{sign:'魔羯座',deg:"18°11'",house:'8宮'},moon:{sign:'雙魚座',deg:"24°42'",house:'10宮'},rising:{sign:'雙子座',deg:"10°33'",house:'1宮'},mercury:{sign:'魔羯座',deg:"0°37'",house:'7宮',retro:true},venus:{sign:'射手座',deg:"9°53'",house:'6宮'},mars:{sign:'天秤座',deg:"29°02'",house:'5宮'},jupiter:{sign:'射手座',deg:"27°45'",house:'7宮'},saturn:{sign:'天蠍座',deg:"14°36'",house:'6宮'},uranus:{sign:'射手座',deg:"11°35'",house:'7宮'},neptune:{sign:'射手座',deg:"29°39'",house:'7宮'},pluto:{sign:'天蠍座',deg:"1°56'",house:'5宮'},mc:{sign:'水瓶座',deg:"25°48'",house:'10宮'}},humanDesign:{type:'顯示者',profile:'4/6',definition:'二分人',authority:'情緒型',strategy:'告知',notSelf:'憤怒',channels:['57-10（自愛/形象）','35-36（情緒激勵者）'],incarnationCross:'右角度交叉之滲透4（54/53｜57/51）'},bazi:{year:'癸亥',month:'癸丑',day:'癸酉',hour:'未時',note:'四柱全癸，水極旺'},coachPersonality:'冷靜、簡潔、有判斷。不說廢話，不雞湯。像真實教練，不像AI。偶爾直接，但不羞辱人。最多3句，可用命令句。禁止長篇解釋和情緒安慰。',coachFocus:'均衡',coachTone:3};
 
 // ════ STORAGE ══════════════════════════════════════════════
 const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
@@ -874,8 +873,16 @@ async function generateOrbit(){
   var month=today.getMonth()+1;
   var prompt='\u5c0d\u8c61\uff1aCathy\n\u592a\u967d\u9b54\u7faf8\u5bae/\u6708\u4eae\u96d9\u9b5210\u5bae/\u4e0a\u5347\u96d9\u5b511\u5bae/\u6c34\u661f\u9b54\u7faf\u9006\u884c7\u5bae/\u91d1\u661f\u5c04\u624b6\u5bae/\u706b\u661f\u5929\u79e4\u5bae5\u5bae/\u6728\u661f\u5c04\u624b7\u5bae/\u571f\u661f\u5929\u874812\u5bae\n\u516b\u5b57\uff1a\u7678\u4ea5\u7678\u4e11\u7678\u9149\u672a\u6642\uff08\u56db\u67f1\u5168\u7678\u6c34\u65fa\uff09\n\u4eba\u985e\u5716\uff1a\u986f\u793a\u80054/6\u60c5\u7dd2\u6b0a\u5a01\u901a\u905757-10\u548c35-36\nMBTI:INTJ\n\u73fe\u57282026\u5e74'+month+'\u6708\u7b2c'+weekNum+'\u9031\u3002\n\u8acb\u7d66\u9019\u9031\u500b\u4eba\u5316\u8fd0\u52f4\uff0c\u5206\u56db\u5340\u584a\uff1a\u2728\u9ad4\u614b\u00b7\u7f8e\u8c8c / \u26a1\u904b\u52d5\u8868\u73fe / \ud83d\udd2e\u4eba\u985e\u5716\u80fd\u91cf / \ud83d\u0044INTJ\u5fc3\u667a\u3002\u6bcf\u5340\u58432-3\u53e5\u3002\u7d50\u5c3e\u7d66\u300c\u2736 \u672c\u9031\u884c\u52d5\u300d\u4e00\u53e5\u5177\u9ad4\u5efa\u8b70\u3002\u7e41\u9ad4\u4e2d\u6587\u3002';
   var sys='\u4f60\u662f\u878d\u5408\u5360\u661f\u3001\u516b\u5b57\u3001\u4eba\u985e\u5716\u3001MBTI\u7684\u547d\u7406\u9867\u554f\uff0c\u7d66\u51fa\u5177\u9ad4\u6709\u7528\u7684\u672c\u9031\u6307\u5f15\u3002\u4e0d\u8981\u6c3e\u6cdb\u800c\u8b7a\uff0c\u8981\u7d50\u5408\u661f\u76e4\u7279\u8cea\u8aaa\u3002';
+  var orbitKey=getApiKey();
+  if(!orbitKey){
+    el.innerHTML='<div style="font-size:12px;color:var(--text-d);font-family:var(--mono);padding:8px 0">請先填入 API Key 才能載入命理運勢。</div>';
+    return;
+  }
   try{
-    var msg=await callAI([{role:'user',content:prompt}],sys);
+    var orbitRes=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':orbitKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:sys,messages:[{role:'user',content:prompt}]})});
+    var orbitData=await orbitRes.json();
+    if(orbitData.error){throw new Error(orbitData.error.message);}
+    var msg=orbitData.content&&orbitData.content.find(function(b){return b.type==='text';})?orbitData.content.find(function(b){return b.type==='text';}).text:'';
     var lines=msg.split('\n').filter(function(l){return l.trim();});
     var html='';
     var current=null;
@@ -892,8 +899,9 @@ async function generateOrbit(){
     });
     if(current)html+=current.isAction?'<div style="margin-top:10px;padding:10px 12px;background:rgba(8,66,200,0.08);border-radius:12px;border-left:2px solid var(--blue)"><div style="font-size:8px;color:var(--blue);letter-spacing:3px;font-family:var(--mono);margin-bottom:4px">'+current.label+'</div><div style="font-size:12px;color:var(--text);font-weight:500">'+current.text+'</div></div>':'<div style="margin-bottom:10px"><div style="font-size:8px;color:var(--blue);letter-spacing:3px;font-weight:600;font-family:var(--mono);margin-bottom:4px">'+current.label+'</div><div style="font-size:12px;color:var(--text-m);line-height:1.78">'+current.text+'</div></div>';
     el.innerHTML=html||'<div style="font-size:12px;color:var(--text-m)">'+msg+'</div>';
-  }catch{
-    el.innerHTML='<div style="font-size:12px;color:var(--text-d);font-family:var(--mono)">網路問題，稍後再試。</div>';
+  }catch(orbitErr){
+    console.error('Orbit error:',orbitErr);
+    el.innerHTML='<div style="font-size:12px;color:var(--text-d);font-family:var(--mono)">載入失敗：'+orbitErr.message+'</div>';
   }
 }
 
